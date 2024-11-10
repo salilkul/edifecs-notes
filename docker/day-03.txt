@@ -1,0 +1,170 @@
+  950  docker ps
+  951  docker ps -a
+  952  docker system prune
+  953  docker ps -a
+  954  docker image ls
+  955  docker image rm -f $(docker image ls -qa)
+  956  docker image ls
+  957  docker container ls
+  958  docker container run -d --name mycont nginx
+  959  docker ps
+  960  hostname -i
+  961  systemctl stop httpd
+  962  systemctl disable httpd
+  963  docker ps
+  964  docker container exec -it mycont bash
+  965  curl -v localhost:80
+  966  #port-mapping
+  967  docker container run -d -p 80:80 --name mycont1 nginx
+  968  docker container run -d -p 8080:80 --name mycont2 nginx
+  969  docker ps
+  970  docker container run -d -p 8080:80 --name mycont3 nginx
+  971  docker ps
+  972  docker container exec -it mycont bash
+  973  ls
+  974  docker ps
+  975  docker container cp 57c6150abd67:/testfile .
+  976  ls
+  977  ls -ltr
+  978  cat testfile
+  979  docker ps
+  980  docker container run -d -p 8080:80 -v edifecsvol:/tmp  --name mycont4 nginx
+  981  docker container run -d -p 8081:80 -v edifecsvol:/tmp  --name mycont5 nginx
+  982  docker ps
+  983  #docker container run -d -p 8081:80 -v edifecsvol:/tmp  --name mycont5 nginx
+  984  docker volume ls
+  985  cd /var/lib/docker/
+  986  ls
+  987  cd volumes/
+  988  ls
+  989  cd edifecsvol
+  990  s
+  991  ls
+  992  cd _data/
+  993  ls
+  994  pwd
+  995  ls -ltr
+  996  docker container exec -it mycont5 bash
+  997  pwd
+  998  ls -ltr
+  999  cat newfile
+ 1000  #docker container run -d -p 8081:80 -v edifecsvol:/tmp  --name mycont5 nginx
+ 1001  df -h /var/lib/docker/
+ 1002  docker container run -d -p 8082:80 -v /mnt/edifecs:/tmp  --name mycont6 nginx
+ 1003  docker ps
+ 1004  cd /mnt/edifecs
+ 1005  ls -ltr
+ 1006  docker container exec -it mycont6 bash
+ 1007  pwd
+ 1008  ls
+ 1009  touch basefile
+ 1010  ls
+ 1011  docker container exec -it mycont6 bash
+ 1012  #docker container run -d -p 8082:80 -v /mnt/edifecs:/tmp  --name mycont6 nginx
+ 1013  docker system prune
+ 1014  docker volume prune
+ 1015  docker container ls
+ 1016  docker container rm -f $(docker ps -qa)
+ 1017  docker container ls
+ 1018  docker container ls -a
+ 1019  docker container run -d --name mycont nginx
+ 1020  docker ps
+ 1021  docker container exec -it mycnt bash
+ 1022  docker container exec -it mycont bash
+ 1023  docker container inspect mycont
+ 1024  docker container run -d --name mycont1 nginx
+ 1025  docker container inspect mycont1
+ 1026  docker network ls
+ 1027  ip a s
+ 1028  docker network ls
+ 1029  docker container run -d --name mycont2 nginx
+ 1030  docker container inspect mycont2
+ 1031  ip a s
+ 1032  docker container ls
+ 1033  docker container rm -f mycont2
+ 1034  ip a s
+ 1035  ls
+ 1036  docker network ls
+ 1037  hostname -i
+ 1038  docker network ls
+ 1039  docker network create my-net
+ 1040  docker network ls
+ 1041  ip a s
+ 1042  docker network sl
+ 1043  docker network s
+ 1044  docker network ls
+ 1045  docker container run -d --net my-net --name customnwcont1 nginx
+ 1046  docker container inspect customnwcont1
+ 1047  docker container run -d --net my-net --name customnwcont2 nginx
+ 1048  docker container inspect customnwcont1
+ 1049  docker container inspect customnwcont2
+ 1050  docker ps
+ 1051  docker container rename mycont defaultnwcont
+ 1052  docker container rename mycont1 defaultnwcont1
+ 1053  docker ps
+ 1054  docker container exec -it defaultnwcont bash
+ 1055  docker ps
+ 1056  docker container run -d --name mycont3 nginx
+ 1057  docker container run -d --name mycont4 nginx
+ 1058  docker container rm -f defaultnwcont1
+ 1059  docker container run -d --name mycont5 nginx
+ 1060  docker container run -d --name defaultnwcont1 nginx
+ 1061  docker container inspect defaultnwcont1
+ 1062  docker ps
+ 1063  docker container rm -f mycont5 mycont4 mycont3
+ 1064  docker [s
+ 1065  docker ps
+ 1066  docker container exec -it defaultnwcont bash
+ 1067  docker container exec -it customnwcont bash
+ 1068  docker container exec -it customnwcont1 bash
+ 1069  docker ps
+ 1070  docker netowrk connect bridge customnwcont1
+ 1071  docker network connect bridge customnwcont1
+ 1072  docker container inspect customnwcont1
+ 1073  docker container exec -it customnwcont1 bash
+ 1074  docker ps
+ 1075  docker container inspect defaultnwcont1
+ 1076  docker ps
+ 1077  docker container exec -it customnwcont1 bash
+ 1078  docker ps
+ 1079  docker network disconnect bridge customnwcont1
+ 1080  docker network ls
+ 1081  docker ps
+ 1082  docker container run -d --net host --name hostnwcont nginx
+ 1083  docker ps -a
+ 1084  docker container inspect 36e9793957f9
+ 1085  docker ps
+ 1086  docker container run -d --net host --name hostnwcont1 nginx
+ 1087  docker ps -a
+ 1088  docker logs aa486688e9ba
+ 1089  docker ps
+ 1090  docker network ls
+ 1091  #overlay
+ 1092  docker ps
+ 1093  doker container rm -f hostnwcont
+ 1094  docker container rm -f hostnwcont
+ 1095  docker container rm -f hostnwcont1
+ 1096  docker ps
+ 1097  docker container exec -it 0c8a8a45fd02 bash
+ 1098  docker container ls
+ 1099  docker container commit defaultnwcont1 myimg
+ 1100  docker image ls
+ 1101  docker save myimg > myimg.tar
+ 1102  ls -ltr
+ 1103  docker ps
+ 1104  docker container rm -f $(docker ps -aq)
+ 1105  docker image ls
+ 1106  docker image rm -f myimg nginx
+ 1107  docker ps
+ 1108  docker ps -a
+ 1109  docker image ls
+ 1110  ls -ltr
+ 1111  #coomit --> converted the container to image
+ 1112  #save --> converted the image to tar file
+ 1113  #load --> convert back the tar file to image
+ 1114  docker load < myimg.tar
+ 1115  docker image ls
+ 1116  docker container run -it --name mycont myimg
+ 1117  docker container run -it --name mycont myimg bash
+ 1118  docker container run -it --name mycont1 myimg bash
+ 1119  ls -ltr

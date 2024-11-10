@@ -1,0 +1,85 @@
+ 1001  docker --version
+ 1002  systemctl status docker
+ 1003  #yum install docker
+ 1004  #systemctl start docker
+ 1005  #systemctl status docker
+ 1006  #systemctl enable docker
+ 1007  #docker --version
+ 1008  docker container run nginx
+ 1009  docker container run -d nginx
+ 1010  docker ps
+ 1011  docker container ls
+ 1012  docker  ps
+ 1013  docker container run --name mycont -d nginx
+ 1014  docker ps -a
+ 1015  docker system prune
+ 1016  docker container run -d nginx
+ 1017  docker ps -a
+ 1018  docker ps
+ 1019  docker ps -a
+ 1020  docker container rm -f 12e58f880790
+ 1021  docker ps
+ 1022  docker container run --name mycont -d nginx
+ 1023  docker ps
+ 1024  docker run --name mycont1 -d nginx
+ 1025  docker ps
+ 1026  docker container ls
+ 1027  docker ps
+ 1028  docker run --name mycont2 -d nginx sleep 60
+ 1029  docker run --name mycont3 -d alpine sleep 60
+ 1030  docker ps
+ 1031  docker ps -a
+ 1032  docker ps
+ 1033  docker container stop mycont1
+ 1034  docker ps
+ 1035  docker ps -a
+ 1036  docker container start mycont1
+ 1037  docker ps -a
+ 1038  docker container rm mycont1
+ 1039  docker container stop mycont1
+ 1040  docker container rm mycont1
+ 1041  docker container start mycont1
+ 1042  docker ps -a
+ 1043  docker container rm mycont
+ 1044  docker container rm -f mycont
+ 1045  #docker container stop mycont1
+ 1046  #docker container rm mycont1
+ 1047  #docker container rm -f mycont
+ 1048  docker ps -a
+ 1049  docker container kill modest_antonelli
+ 1050  docker ps -a
+ 1051  docker container start ca39cde10109
+ 1052  docker ps -a
+ 1053  docker container pause ca39cde10109
+ 1054  docker ps -a
+ 1055  docker container unpause ca39cde10109
+ 1056  docker ps -a
+ 1057  docker logs 861ab5eda2a2
+ 1058  docker logs ed7437d01398
+ 1059  docker logs ca39cde10109
+ 1060  tree
+ 1061  docker ps -a
+ 1062  docker run --name mycont2 nginx
+ 1063  docker run --name mycont3 nginx
+ 1064  docker run --name mycont4 nginx
+ 1065*
+ 1066  docker ps -a
+ 1067  docker container rename modest_antonelli mycont1
+ 1068  docker ps -a
+ 1069  docker container exec -it mycont1 bash
+ 1070  docker container exec -i mycont1 bash
+ 1071  docker container exec -t mycont1 bash
+ 1072  docker ps -a
+ 1073  docker system df
+ 1074  docker ps -a -s
+ 1075  docker stats
+ 1076  docker ps -a -s
+ 1077  docker stats
+ 1078  docker ps -a
+ 1079  free -m
+ 1080  docker ps -a -s
+ 1081  docker ps -a
+ 1082  docker container prune
+ 1083  docker ps -a
+ 1084  docker container ls -a
+ 1085  docker container inspect ca39cde10109

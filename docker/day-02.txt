@@ -1,0 +1,297 @@
+  930  docker container run -d nginx
+  931  docker ps -a
+  932  docker ps
+  933  docker ps -a
+  934  docker container rm -f 12e58f880790
+  935  docker ps
+  936  docker container run --name mycont -d nginx
+  937  docker ps
+  938  docker run --name mycont1 -d nginx
+  939  docker ps
+  940  docker container ls
+  941  docker ps
+  942  docker run --name mycont2 -d nginx sleep 60
+  943  docker run --name mycont3 -d alpine sleep 60
+  944  docker ps
+  945  docker ps -a
+  946  docker ps
+  947  docker container stop mycont1
+  948  docker ps
+  949  docker ps -a
+  950  docker container start mycont1
+  951  docker ps -a
+  952  docker container rm mycont1
+  953  docker container stop mycont1
+  954  docker container rm mycont1
+  955  docker container start mycont1
+  956  docker ps -a
+  957  docker container rm mycont
+  958  docker container rm -f mycont
+  959  #docker container stop mycont1
+  960  #docker container rm mycont1
+  961  #docker container rm -f mycont
+  962  docker ps -a
+  963  docker container kill modest_antonelli
+  964  docker ps -a
+  965  docker container start ca39cde10109
+  966  docker ps -a
+  967  docker container pause ca39cde10109
+  968  docker ps -a
+  969  docker container unpause ca39cde10109
+  970  docker ps -a
+  971  docker logs 861ab5eda2a2
+  972  docker logs ed7437d01398
+  973  docker logs ca39cde10109
+  974  tree
+  975  docker ps -a
+  976  docker run --name mycont2 nginx
+  977  docker run --name mycont3 nginx
+  978  docker run --name mycont4 nginx
+  979  docker ps -a
+  980  docker container rename modest_antonelli mycont1
+  981  docker ps -a
+  982  docker container exec -it mycont1 bash
+  983  docker container exec -i mycont1 bash
+  984  docker container exec -t mycont1 bash
+  985  docker ps -a
+  986  docker system df
+  987  docker ps -a -s
+  988  docker stats
+  989  docker ps -a -s
+  990  docker stats
+  991  docker ps -a
+  992  free -m
+  993  docker ps -a -s
+  994  docker ps -a
+  995  docker container prune
+  996  docker ps -a
+  997  docker container ls -a
+  998  docker container inspect ca39cde10109
+  999  history
+ 1000  docker ps -a
+ 1001  docker container run -d --name mycont nginx
+ 1002  docker ps -a
+ 1003  docker container exec -it mycont bash
+ 1004  docker image ls
+ 1005  docker system prune
+ 1006  docker image ls
+ 1007  docker image rm -f $(docker image ls -aq)
+ 1008  docker system prune
+ 1009  docker image ls
+ 1010  docker images
+ 1011  docker ps -a
+ 1012  docker image rm nginx
+ 1013  docker container stop 0cb859208227
+ 1014  docker ps -a
+ 1015  docker container rm 0cb859208227
+ 1016  docker ps -a
+ 1017  docker image rm nginx
+ 1018  docker image lks
+ 1019  docker image ls
+ 1020  docker container run -d --name mycont nginx
+ 1021  docker ps -a
+ 1022  docker image ls
+ 1023  #library/nginx == docker.io/library/nginx
+ 1024  docker image pull ubuntu
+ 1025  ls
+ 1026  cd  edifecs-team2/
+ 1027  ls
+ 1028  cd ..
+ 1029  rm -rf edifecs-team2/
+ 1030  cd demo/
+ 1031  ls
+ 1032  cd ..
+ 1033  rm -rf demo/
+ 1034  ls
+ 1035  vi Dockerfile
+ 1036  rm Dockerfile
+ 1037  ls
+ 1038  vi Dockerfile
+ 1039  ls
+ 1040  mkdir edifecs
+ 1041  mv Dockerfile ./edifecs/
+ 1042  ls
+ 1043  cd edifecs/
+ 1044  ls
+ 1045  docker image ls
+ 1046  docker build -t myimg .
+ 1047  docker image ls
+ 1048  cat Dockerfile
+ 1049  vi Dockerfile
+ 1050  docker build -t myimg .
+ 1051  docker image ls
+ 1052  cat Dockerfile
+ 1053  ls
+ 1054  mv Dockerfile /tmp/
+ 1055  ls
+ 1056  docker build -t myimg .
+ 1057  docker build -t myimg /tmp/Dockerfile
+ 1058  docker build -t myimg /tmp/
+ 1059  mv /tmp/Dockerfile .
+ 1060  ls
+ 1061  mv Dockerfile Myfile
+ 1062  ls
+ 1063  docker build -t myimg .
+ 1064  #docker build -t myimg .
+ 1065  #docker build -t myimg /tmp/
+ 1066  ls
+ 1067  #docker build -f Myfile -t myimg .
+ 1068  docker build -f Myfile -t myimg .
+ 1069  ls
+ 1070  mv Myfile Dockerfile
+ 1071  ls
+ 1072  vi Dockerfile
+ 1073  #docker build -t myimg .
+ 1074  docker build -t myimg .
+ 1075  vi Dockerfile
+ 1076  ls
+ 1077  cat Dockerfile
+ 1078  docker build -t myimg .
+ 1079  vi myfile
+ 1080  ls
+ 1081  docker build -t myimg .
+ 1082  docker ps
+ 1083  docker  container exec -it 4e29fe5a3aa9 bash
+ 1084  docker container cp myfile 4e29fe5a3aa9:/
+ 1085  docker  container exec -it 4e29fe5a3aa9 bash
+ 1086  vi Dockerfile
+ 1087  docker image ls
+ 1088  docker container run -d --name mycont2 myimg
+ 1089  docker ps
+ 1090  docker container run -d --name mycont3 myimg sleep 60
+ 1091  docker ps
+ 1092  docker container exec -it a192bdb0f147 bash
+ 1093  docker container run -it --name mycont myimg
+ 1094  docker container run -it --name mycont5 myimg
+ 1095  docker ps -a
+ 1096  docker container prune
+ 1097  docker ps -a
+ 1098  docker image ls
+ 1099  docker container run -it --name mycont myimg
+ 1100  docker container run -it --name mycont1 myimg
+ 1101  docker ps -a
+ 1102  docker container rm 8652bfa5b7e2
+ 1103  docker container run --rm -it --name mycont1 myimg
+ 1104  docker ps -a
+ 1105  ls
+ 1106  cat Dockerfile
+ 1107  docker ps
+ 1108  docker ps -a
+ 1109  vi Dockerfile
+ 1110  ls
+ 1111  vi basefile
+ 1112  docker build -t myimg .
+ 1113  ls
+ 1114  docker container run --rm -it --name mycont1 myimg
+ 1115  ls
+ 1116  cd ..
+ 1117  ls
+ 1118  tar -cvzf java.tar java-project
+ 1119  ls -ltr
+ 1120  ls -ltrh
+ 1121  cd java-project/
+ 1122  ls
+ 1123  rm -rf target/
+ 1124  cd ..
+ 1125  ls
+ 1126  rm java.tar
+ 1127  tar -cvzf java.tar java-project
+ 1128  ls -ltrh
+ 1129  #tar -cvzf java.tar java-project
+ 1130  mv java.tar ./edifecs/
+ 1131  cd edifecs/
+ 1132  ls
+ 1133  vi Dockerfile
+ 1134  docker build -t myimg .
+ 1135  docker container run --rm -it --name mycont1 myimg
+ 1136  ls
+ 1137  docker image ls
+ 1138  vi Dockerfile
+ 1139  docker build -t myimg .
+ 1140  docker container run --rm -it --name mycont1 myimg
+ 1141  vi Dockerfile
+ 1142  docker build -t myimg .
+ 1143  docker container run --rm -it --name mycont1 myimg
+ 1144  docker image ls
+ 1145  #docker build -t myimg:latest . == docker build -t myimg .
+ 1146  vi Dockerfile
+ 1147  docker build -t myimg .
+ 1148  docker image ls
+ 1149  cat Dockerfile
+ 1150  vi Dockerfile
+ 1151  docker build -t myimg:1.0 .
+ 1152  docker container run --rm -it --name mycont1 myimg:1.0
+ 1153  vi Dockerfile
+ 1154  docker build -t myimg:2.0 .
+ 1155  docker container run --rm -it --name mycont1 myimg:2.0
+ 1156  vi Dockerfile
+ 1157  docker build -t myimg:3.0 .
+ 1158  docker container run --rm -it --name mycont1 myimg:3.0
+ 1159  vi Dockerfile
+ 1160  docker ps -a
+ 1161  docker container run -it --name mycont1 myimg:3.0
+ 1162  docker ps -a
+ 1163  cat Dockerfile
+ 1164  docker image history ubuntu:14.04
+ 1165  vi Dockerfile
+ 1166  docker build -t myimg:4.0 .
+ 1167  docker container run -it --name mycont1 myimg:4.0
+ 1168  docker container run -it --name mycont2 myimg:4.0
+ 1169  docker ps -a
+ 1170  cat Dockerfile
+ 1171  vi Dockerfile
+ 1172  docker build -t myimg:5.0 .
+ 1173  docker container run -it --name mycont3 myimg:5.0
+ 1174  docker ps -a
+ 1175  docker container run -it --name mycont4 myimg:5.0 hello
+ 1176  docker container run -it --name mycont4 myimg:5.0 uptime
+ 1177  docker container run -it --name mycont5 myimg:5.0 uptime
+ 1178  docker container run -it --name mycont5 myimg:5.0 date
+ 1179  docker container run -it --name mycont6 myimg:5.0 date
+ 1180  docker ps -a
+ 1181  ls
+ 1182  cd ..
+ 1183  ls
+ 1184  cp useradd.sh ./edifecs/
+ 1185  ls
+ 1186  cd edifecs/
+ 1187  ls
+ 1188  vi Dockerfile
+ 1189  docker container run -it --name mycont6 myimg:5.0
+ 1190  docker container run -it --name mycont7 myimg:5.0
+ 1191  cat Dockerfile
+ 1192  docker image ks
+ 1193  docker image ls
+ 1194  docker container run -it --name mycont7 myimg:5.0
+ 1195  docker container run -it --name mycont8 myimg:5.0
+ 1196  vi Dockerfile
+ 1197  docker build -t myimg:6.0 .
+ 1198  docker container run -it --name mycont9 myimg:6.0
+ 1199  docker ps -a
+ 1200  ls
+ 1201  cat useradd.sh
+ 1202  useradd user1
+ 1203  useradd user10
+ 1204  id user10
+ 1205  id user11 user12 user13
+ 1206  useradd user11 user12 user13
+ 1207  ls
+ 1208  vi Dockerfile
+ 1209  docker build -t myimg:7.0 .
+ 1210  docker container run -it --name mycont10 myimg:7.0
+ 1211  vi Dockerfile
+ 1212  docker build -t myimg:8.0 .
+ 1213  docker container run -it --name mycont11 myimg:8.0 user1
+ 1214  vi Dockerfile
+ 1215  docker build -t myimg:9.0 .
+ 1216  docker container run -it --name mycont12 myimg:9.0 user1
+ 1217  vi Dockerfile
+ 1218  docker build -t myimg:10.0 .
+ 1219  docker container run -it --rm --name mycont13 myimg:10.0 user1
+ 1220  docker container run -it --rm --name mycont13 myimg:10.0 user2
+ 1221  docker container run -it --rm --name mycont13 myimg:10.0 user3
+ 1222  vi Dockerfile
+ 1223  docker build -t myimg:11.0 .
+ 1224  docker container run -it --rm --name mycont13 myimg:11.0
+ 1225  docker container run -it --rm --name mycont13 myimg:11.0 user2
+ 1226  cat Dockerfile

@@ -1,0 +1,14 @@
+FROM ubuntu:14.04
+RUN apt-get update && apt-get install curl -y
+RUN useradd testuser
+COPY useradd.sh .
+COPY myfile .
+ADD basefile .
+#COPY java.tar .
+#ADD java.tar /home
+#USER testuser
+#WORKDIR /app
+#CMD ["echo", "hi user1"]
+CMD ["user3"]
+#ENTRYPOINT ["bash", "useradd.sh"]
+ENTRYPOINT ["echo", "hiiii"]
