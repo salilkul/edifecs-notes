@@ -1,0 +1,123 @@
+ 1002  kubectl get po
+ 1003  kubectl get deploy
+ 1004  kubectl delete deploy ng-dep
+ 1005  kubectl get po
+ 1006  kubectl delete po init-container
+ 1007  kubectl get po
+ 1008  kubectl get po -o wide
+ 1009  vi deploy.yaml
+ 1010  kubectl apply -f deploy.yaml
+ 1011  kubectl get po -o wide
+ 1012  kubectl exec -it ng-dep-7ccb498884-xcw4w -- bash
+ 1013  systemctl stop httpd
+ 1014  kubectl get po -o wide
+ 1015  curl -v locahost
+ 1016  curl -v localhost
+ 1017  vi svc.yaml
+ 1018  kubectl get svc
+ 1019  kubectl delete svc ng-svc-lb
+ 1020  kubectl get svc
+ 1021  kubectl apply -f svc.yaml
+ 1022  kubectl get svc
+ 1023  cat svc.yaml
+ 1024  kubectl delete -f svc.yaml
+ 1025  vi svc.yaml
+ 1026  kubectl apply -f svc.yaml
+ 1027  kubectl get svc
+ 1028  kubectl delete -f svc.yaml
+ 1029  kubectl get svc
+ 1030  kubectl apply -f svc.yaml
+ 1031  kubectl get svc
+ 1032  vi svc.yaml
+ 1033  kubectl get po
+ 1034  cat svc.yaml
+ 1035  kubectl get po --show-labels
+ 1036* cat svc.yaml
+ 1037  kubectl get po --show-labels
+ 1038* kubectl describe svc ng-sv
+ 1039  kubectl get po -o wide
+ 1040  kubectl get svc
+ 1041  kubectl delete -f svc.yaml
+ 1042  kubectl get svc
+ 1043  vi svc-lb.yaml
+ 1044  kubectl apply -f  svc-lb.yaml
+ 1045  kubectl get svc
+ 1046  kubectl describe svc ng-svc-lb
+ 1047  kubectl get svc
+ 1048  kubectl get svcpo
+ 1049  kubectl get po
+ 1050  kubectl logs ng-dep-7ccb498884-h4ggc
+ 1051  kubectl exec -it  ng-dep-7ccb498884-h4ggc -- bash
+ 1052  kubectl get svc
+ 1053  kubectl describe svc ng-svc-lb
+ 1054  kubectl get po -o wide
+ 1055  kubectl get svc
+ 1056  curl -v 10.99.2.246:30011
+ 1057  curl -v ng-svc-lb:30011
+ 1058  curl -v ng-svc-lb
+ 1059  curl -v 10.99.2.246
+ 1060  kubectl get svc
+ 1061  curl -v 10.99.2.246
+ 1062  kubectl get svc
+ 1063  kubectl delete svc ng-svc-lb
+ 1064  vi svc2.yaml
+ 1065  kubectl apply -f  svc2.yaml
+ 1066  kubectl get svc
+ 1067  kubectl describe svc cip-svc
+ 1068  curl -v 10.111.132.235
+ 1069  kubectl get svc
+ 1070  kubectl get po
+ 1071  ls
+ 1072  cd ingress-controller/
+ 1073  ls
+ 1074  cd  deployments/
+ 1075  ls
+ 1076  cd ..
+ 1077  ls
+ 1078  kubectl get ns
+ 1079  kubectl get all -n ingress-nginx
+ 1080  ls
+ 1081  vi ingress-rule.yamlingress-rule.yaml
+ 1082  vi ingress-rule.yaml
+ 1083  kubectl ge tpo
+ 1084  kubectl get po -o wide
+ 1085  mkdir -p $HOME/.kube
+ 1086  echo $HOME
+ 1087  pwd
+ 1088  cd
+ 1089  cd .kube/
+ 1090  ls -ld .
+ 1091  ls -ld .kube
+ 1092  ls -ld ./.kube
+ 1093  cd ..
+ 1094  ls -ld .kube/
+ 1095  vi /etc/kubernetes/admin.conf
+ 1096  cd .kube/
+ 1097  pwd
+ 1098  ls -ltr
+ 1099  #kubeconfig
+ 1100  kubectl get po
+ 1101  mv config /tmp/
+ 1102  ls -ltr
+ 1103  kubectl get po
+ 1104  mv /tmp/config .
+ 1105  vi config
+ 1106  hostname -i
+ 1107  #172.31.35.132
+ 1108  vi config
+ 1109  kubectl get po -n kube-system
+ 1110  useradd jatin
+ 1111  su - jatin
+ 1112  cp config /home/jatin/.kube/
+ 1113  chown jatin:jatin .kube -R
+ 1114  chown jatin:jatin /home/jatin/.kube -R
+ 1115  chmod 600 /home/jatin/.kube
+ 1116  su - jatin
+ 1117  chmod 700 /home/jatin/.kube
+ 1118  chmod 600 /home/jatin/.kube/config
+ 1119  su - jatin
+ 1120  cd
+ 1121  userdel  -r jatin
+ 1122  l
+ 1123  kubectl run testpod --image=nginx
+ 1124  kubectl describe po testpod
